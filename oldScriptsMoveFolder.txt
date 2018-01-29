@@ -1,0 +1,32 @@
+
+appraisalApiTransferDeploy-dev
+
+
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\appraisalApi  && move Images C:\inetpub\wwwroot\Interne\appraisalApiHardCodedFolder"
+forfiles /P C:\inetpub\wwwroot\Interne\appraisalApi /M * /C "cmd /c if @isdir==FALSE del @file"
+forfiles /P C:\inetpub\wwwroot\Interne\appraisalApi /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"
+cmd /c "cd /d C:\inetpub\jenkins\JenkinsZipProject\appraisal\api &&  7z x Published.zip -oC:\inetpub\wwwroot\Interne\appraisalApi"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\appraisalApi && xcopy /e Published C:\inetpub\wwwroot\Interne\appraisalApi"
+cmd /c "rmdir /s  /q C:\inetpub\wwwroot\Interne\appraisalApi\Published"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\appraisalApiHardCodedFolder && move Images C:\inetpub\wwwroot\Interne\appraisalApi"
+
+
+
+**********************
+
+recruitoApiTransferDeploy-dev
+
+
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApi && move image C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApi && move Images C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApi && move CSVReport C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApi && move Resume C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder"
+forfiles /P C:\inetpub\wwwroot\Interne\recruitoApi /M * /C "cmd /c if @isdir==FALSE del @file"
+forfiles /P C:\inetpub\wwwroot\Interne\recruitoApi /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"
+cmd /c "cd /d C:\inetpub\jenkins\JenkinsZipProject &&  7z x Published.zip -oC:\inetpub\wwwroot\Interne\recruitoApi"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApi && xcopy /e Published C:\inetpub\wwwroot\Interne\recruitoApi"
+cmd /c "rmdir /s  /q C:\inetpub\wwwroot\Interne\recruitoApi\Published"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder && move image C:\inetpub\wwwroot\Interne\recruitoApi"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder && move Images C:\inetpub\wwwroot\Interne\recruitoApi"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder && move CSVReport C:\inetpub\wwwroot\Interne\recruitoApi"
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\recruitoApiHardCodedFolder && move Resume C:\inetpub\wwwroot\Interne\recruitoApi"

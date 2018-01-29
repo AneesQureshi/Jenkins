@@ -1,0 +1,8 @@
+git version
+cd C:\Users\mindit\Desktop\test
+C:
+git remote -v
+git remote show origin
+git add .
+git commit -m "changes added"
+git push origin master

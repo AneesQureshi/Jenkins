@@ -1,0 +1,1 @@
+"C:\Program Files\MySQL\MySQL Server 5.6\bin\mysql.exe" mysql -h minditdeve.cl7byd0npkno.ap-south-1.rds.amazonaws.com -u admin -pmindit123 < Current.sql
