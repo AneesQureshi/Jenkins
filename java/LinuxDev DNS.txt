@@ -1,0 +1,40 @@
+Public DNS (IPv4): ec2-34-209-251-179.us-west-2.compute.amazonaws.com
+
+https://docs.aws.amazon.com/console/ec2/instances/connect/ubuntu
+putty
+
+
+pscp -i D:\MindITProjects\Linux Server\LinuxDev.ppk C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\ROOT\dist ubuntu@ec2-34-209-251-179.us-west-2.compute.amazonaws.com:/var/lib/tomcat8/webapps/Root/dist
+
+
+scp D:\MindITProjects\Linux Server\LinuxDev.ppk C:\Users\lenovo\Documents\sample.txt ubuntu@ec2-34-209-251-179.us-west-2.compute.amazonaws.com:/var/lib/tomcat8/webapps/Root/
+
+
+pscp -i D:\MindITProjects\LinuxDev.ppk C:\Users\lenovo\Documents\sample.txt ubuntu@ec2-34-209-251-179.us-west-2.compute.amazonaws.com:/var/lib/tomcat8/webapps/ROOT/sample.txt
+
+
+systemctl start tomcat8      -    ved
+systemctl stop tomcat8 -    ved
+systemctl restart tomcat8 -    ved
+
+tomcat8- uname- ved pwd - pandey
+
+sudo chmod 0755 /var/lib/tomcat8/conf/tomcat-users.xml
+
+sudo chmod o+w /var/lib/tomcat8/webapps
+
+sudo chmod 0755 /var/lib/tomcat8
+
+sudo chmod 0755 /var/lib/tomcat8/webapps
+sudo chmod 0755 /var/lib/tomcat8/conf/server.xml
+sudo chmod 0755 /var/lib/tomcat8/conf/context.xml
+
+sudo vi /var/lib/tomcat8/conf/tomcat-users.xml
+
+<role rolename="manager-script">
+<user username="anees" password="qureshi" roles="manager-script"/>
+
+
+<role rolename="manager-gui">
+<role rolename="manager-script">
+<user username="ved" password="pandey" roles="manager-gui,manager-script"/>

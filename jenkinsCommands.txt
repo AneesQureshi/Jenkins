@@ -1,0 +1,24 @@
+/t:Clean;Rebuild 
+/p:DeployOnBuild=true /p:PublishProfile=MyProfile /p:VisualStudioVersion=14.0 /p:Configuration=release
+
+
+cd "C:\Program Files (x86)\Jenkins\workspace\amsAppFetchBuildZip\AttendanceManagementSystem" 
+"C:\Program Files (x86)\NuGet\Visual Studio 2015\nuget.exe restore AttendanceManagementSystem.sln"
+
+"AttendanceManagementSystem/website.publishproj" 
+
+
+
+git remote set-url --push origin Y:/test
+
+
+
+mysql -h minditdeve.cl7byd0npkno.ap-south-1.rds.amazonaws.com -u admin -pmindit123 < test.sql
+
+
+
+
+cmd /c "cd /d C:\inetpub\wwwroot\Interne\Test && xcopy /e  Published C:\inetpub\wwwroot\Interne\Test"
+cmd /c "rmdir /s  /q C:\inetpub\wwwroot\Interne\Test\Published"
+
+54.82.184.255
