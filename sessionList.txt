@@ -1,8 +1,0 @@
--Git structure
--db script in git (current.sql),supply this file
--git with tags
--supply the config files structure
--dont put backup in server(provide names of folders if deployed)
--inform if any hardcoded folder is there or not.\
-
-103kb
