@@ -12,10 +12,7 @@ allow local image path
 
 --> sudo chmod -R g+w /var/lib/tomcat8/webapps/ROOT/dist/assets/dist/img
 
-
-systemctl start tomcat8
-systemctl stop tomcat8
-systemctl restart tomcat8
+	
 
 
 change ownership:
@@ -23,3 +20,6 @@ change ownership:
  sudo chown -R root:tomcat8 /var/lib/tomcat8/conf/tomcat-users.xml
 
  sudo chown -R ubuntu:tomcat8 /var/lib/tomcat8
+
+ chown  ubuntu /opt/tomcat/webapps/sample
+
