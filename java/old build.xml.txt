@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="helloworld" default="deploy" basedir=".">
+    <description> Compile, Package and Deploy helloworld</description>
+    <!-- set global properties for this build -->
+    <property name="src" location="./web" />
+    <property name="classes" location="./dist/classes" />
+    
+
+
+    <target name="clean">
+        <delete dir="./dist/classes">
+        </delete>
+        <echo> Cleaned old class files !</echo>
+        <delete>
+            <fileset dir="./dist">
+                <include name="*.war" />
+            </fileset>
+        </delete>
+        <echo> Cleaned old war file in dist folder !</echo>
+    </target>
+
+    
+    <target name="compile" depends="clean" description="compile the source ">
+        <mkdir dir="./dist/classes" />
+        <javac includeantruntime="true" srcdir="${src}" destdir="${classes}"/>
+        <echo> Java file compiled and copied to classes folder !</echo>
+    </target>
+    <target name="build" description="Building War File" depends="compile">
+        <war warfile="./dist/classes/hello.war" webxml="./Web/WEB-INF/web.xml">
+            <fileset dir="./Web">
+                <include name="**/*.jsp" />
+                <include name="**/*.xml" />
+                
+            </fileset>
+              <echo> war created!</echo>
+
+            <classes dir="./dist/classes" />
+        </war>
+    </target>
+    
+
+</project>
