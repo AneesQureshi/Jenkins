@@ -1,3 +1,4 @@
+It will take 3h per server per app to setup the jenkins environment
 new job
 home folder creation
 my profile create
