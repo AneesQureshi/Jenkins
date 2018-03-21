@@ -1,0 +1,1 @@
+ms build cannot publish in jenkins until all the layers have same MyProfile in their PublishProfiles folder (put in all layers same MyProfile.pubxml), then build and publish
